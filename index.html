@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frederikh Tribintan - Cosmic Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Orbitron dan Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(135deg, #0a192f 0%, #1a1a2e 100%);
+            font-family: 'Poppins', sans-serif;
+            color: #e5e7eb;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .fade-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.8s ease-in-out;
+        }
+        .fade-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 191, 255, 0.4);
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a192f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00b7ff;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #66fcf1;
+        }
+        .progress-bar {
+            height: 8px;
+            background: #0a192f;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, #00b7ff, #66fcf1);
+            transition: width 1.5s ease-in-out;
+        }
+        .video-container {
+            position: relative;
+            padding-top: 177.78%;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .media-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .media-container img,
+        .media-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Mengambang -->
+    <nav class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-900 bg-opacity-90 px-8 py-4 rounded-full shadow-lg shadow-cyan-500/30 z-50">
+        <ul class="flex space-x-6 text-sm uppercase">
+            <li><a href="#about" class="text-cyan-300 hover:text-cyan-500 transition-colors">About</a></li>
+            <li><a href="#skills" class="text-cyan-300 hover:text-cyan-500 transition-colors">Skills</a></li>
+            <li><a href="#projects" class="text-cyan-300 hover:text-cyan-500 transition-colors">Projects</a></li>
+            <li><a href="#experience" class="text-cyan-300 hover:text-cyan-500 transition-colors">Experience</a></li>
+            <li><a href="#contact" class="text-cyan-300 hover:text-cyan-500 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="pt-24 px-8 max-w-6xl mx-auto">
+        <!-- Header dengan Nama -->
+        <header class="text-center mb-16">
+            <h1 class="text-5xl text-cyan-400 font-bold tracking-widest animate-pulse">Frederikh Tribintan</h1>
+            <p class="text-lg text-gray-400 mt-2">Web Developer | Tech Enthusiast</p>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="fade-scale mb-20">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <img src="WhatsApp Image 2025-03-05 at 21.53.12_0f897a66 (3).jpg" alt="Foto Profil" class="w-48 h-48 rounded-full border-4 border-cyan-500 shadow-lg">
+                <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg card-hover">
+                    <h2 class="text-3xl text-cyan-400 mb-4">About Me</h2>
+                    <p class="text-lg">Nama saya Frederikh Tribintan, dan saya adalah mahasiswa Teknik Informatika tahun ketiga dengan minat yang kuat pada pengembangan dan pemrograman web. Saya ahli dalam membuat situs web dinamis menggunakan teknologi seperti HTML, Tailwind, Bootstrap, JavaScript, dan PHP, serta kerangka kerja seperti Vue.js dan Laravel. Selain itu, saya memiliki pengalaman dengan Kotlin dan familier dengan pengembangan aplikasi Android. Saya selalu ingin memperluas pengetahuan dan keterampilan saya, dan saya bersemangat untuk berkontribusi pada proyek inovatif yang menantang dan meningkatkan kemampuan teknis saya.</p>
+                    <p class="text-lg mt-2">Alamat: Jl. Nirmala 1 Blok I No 5, Cimanggis, Depok</p>
+                    <p class="text-lg">Kontak: <a href="mailto:frederikhbintan08@gmail.com" class="text-cyan-300 hover:text-cyan-500">frederikhbintan08@gmail.com</a> | +6285171008019</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="fade-scale mb-20">
+            <h2 class="text-3xl text-cyan-400 mb-8 text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-4">Programming Skills</h3>
+                    <ul class="grid grid-cols-2 gap-2">
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Web/Mobile Development</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">HTML 5</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Cascading Style Sheet (CSS)</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Bootstrap</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Tailwind CSS</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">JavaScript</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Vue.js</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">PHP</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Laravel</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">MySQL</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">.NET</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Basic Java</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Android Studio</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-4">Soft Skills</h3>
+                    <ul class="space-y-2">
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Time Management</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Public Speaking</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Communication Skills</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Critical Thinking</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Research</li>
+                        <li class="before:content-['▹'] before:text-cyan-400 before:mr-2">Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-scale mb-20">
+            <h2 class="text-3xl text-cyan-400 mb-8 text-center">My Projects</h2>
+            <!-- Bagian Atas: 3 Proyek -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-2 text-center">Rent Clothes</h3>
+                    <div class="media-container mb-4">
+                        <video autoplay muted loop playsinline>
+                            <source src="0411 (2).mp4" type="video/mp4">
+                            Browser kamu tidak mendukung tag video.
+                        </video>
+                    </div>
+                    <p class="text-sm">Proyek akhir situs web rent_clothes dengan database MySQL, menggunakan HTML, CSS, Tailwind CSS untuk front-end responsif, serta PHP, Vue.js, dan Laravel untuk back-end.</p>
+                    <p class="text-sm mt-2">Tech: Laravel, Vue.js, MySQL</p>
+                    <a href="https://github.com/FrederikhTribintan/frontend_rentclothes.git" target="_blank" class="text-cyan-400 hover:text-cyan-500 text-sm mt-2 inline-block">GitHub</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-2 text-center">Parongtal Cycle</h3>
+                    <video autoplay muted loop playsinline class="mx-auto mt-2" style="max-height: 300px; width: auto;">
+                        <source src="lv_0_20250410230003.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung tag video.
+                    </video>
+                    <p class="text-sm mt-2">Saya mengembangkan aplikasi web sederhana untuk sistem penyewaan sepeda motor, mulai dari mendesain database dengan MySQL hingga membangun backend menggunakan PHP dalam Visual Studio Code. Aplikasi ini dilengkapi dengan fitur login, formulir input data penyewaan, dan dasbor untuk melihat data pengguna secara real-time.</p>
+                    <p class="text-sm mt-2">Tech: Android Studio, MySQL</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-2 text-center">Web Cloning</h3>
+                    <div class="media-container mb-4">
+                        <img src="WebCloning.jpg" alt="Web Cloning">
+                    </div>
+                    <p class="text-sm">Saya juga telah menyelesaikan tugas web yaitu web cloning, website yang saya clone untuk project ini adalah https://www.dominos.com.au/ (<a href="https://www.dominos.com.au/" target="_blank" class="text-cyan-400 hover:text-cyan-500">dominós.com.au</a>).</p>
+                    <p class="text-sm mt-2">Tech: HTML, CSS, JS</p>
+                    <a href="https://github.com/FrederikhTribintan/tailwindcss.git" target="_blank" class="text-cyan-400 hover:text-cyan-500 text-sm mt-2 inline-block">GitHub</a>
+                    <a href="https://bintantailwind.netlify.app/" target="_blank" class="text-cyan-400 hover:text-cyan-500 text-sm mt-2 inline-block ml-2">Live Web</a>
+                </div>
+            </div>
+            <!-- Bagian Tengah: Proyek .NET -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-gray-800 p-6 rounded-lg card-hover max-w-md w-full">
+                    <h3 class="text-xl text-cyan-300 mb-2 text-center">.NET</h3>
+                    <p class="text-sm">Aplikasi konsol sederhana menggunakan C# untuk mengelola data sepeda motor (penyewaan dan penjualan), dengan fitur CRUD dan penyimpanan dalam file .txt.</p>
+                    <p class="text-sm mt-2">Tech: C#</p>
+                    <a href="https://github.com/FrederikhTribintan/Project-.NET.git" target="_blank" class="text-cyan-400 hover:text-cyan-500 text-sm mt-2 inline-block block text-center">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="fade-scale mb-20">
+            <h2 class="text-3xl text-cyan-400 mb-8 text-center">Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-2">Witnessing Sound Choir</h3>
+                    <p class="text-sm">Public Relations Officer (Jan 2024 – Present)</p>
+                    <p class="text-sm mt-2">Mendukung komunikasi dan koordinasi dalam kegiatan paduan suara, membantu mengelola informasi internal, dan mewakili paduan suara dalam peran yang berhubungan dengan publik.</p>
+                </div>
+                <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg card-hover">
+                    <h3 class="text-xl text-cyan-300 mb-2">Universitas Advent Indonesia</h3>
+                    <p class="text-sm">Teknik Informatika | GPA: 3.71/4.00</p>
+                    <p class="text-sm mt-2">Fokus pada Web & Mobile Development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-scale mb-20 text-center">
+            <h2 class="text-3xl text-cyan-400 mb-8">Hubungi Saya</h2>
+            <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg inline-block card-hover">
+                <p class="text-lg">Email: <a href="mailto:frederikhbintan08@gmail.com" class="text-cyan-300 hover:text-cyan-500">frederikhbintan08@gmail.com</a></p>
+                <p class="text-lg">Telepon: +6285171008019</p>
+                <p class="text-lg">GitHub: <a href="https://github.com/frederikhtribintan" target="_blank" class="text-cyan-300 hover:text-cyan-500">FrederikhTribintan</a></p>
+                <p class="text-lg mt-4 italic">"Let’s build something amazing together!"</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript untuk Animasi -->
+    <script>
+        const sections = document.querySelectorAll('.fade-scale');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
